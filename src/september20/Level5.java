@@ -2,6 +2,7 @@ package september20;
 
 import java.util.Scanner;
 
+
 public class Level5 {
 
 	public static void main(String[] args) {
