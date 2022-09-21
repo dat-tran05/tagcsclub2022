@@ -3,7 +3,7 @@ package september20;
 import java.util.*;
 import java.io.*;
 import java.math.*;
-
+//When you're using Comparator.comparing, there's no need to implement Comparable since you're already stating what is being compared
 public class BookSort {
 	public static void main(String[] datt) throws Throwable{
         Scanner sc = new Scanner(System.in);
