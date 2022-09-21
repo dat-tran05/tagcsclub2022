@@ -15,6 +15,10 @@ public class BookSort {
 //        list.sort(Comparator.comparing(Book::getAuthor).thenComparing(Comparator.comparing(Book::getGenre)));
         
         list.forEach(System.out::println);
+        //one liner solution
+        /*
+         * new BufferedReader(new InputStreamReader(System.in)).lines().map(Book::new).sorted(Comparator.comparing(Book::getAuthor).thenComparing(Comparator.comparing(Book::getGenre))).forEachOrdered(System.out::println);
+         */
     }
 }
 class Book implements Comparable<Book>
