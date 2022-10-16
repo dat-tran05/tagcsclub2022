@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int cases = sc.nextInt();
+        int line  = 0;
+        sc.nextLine();
+        StringJoiner joiner = new StringJoiner(" ");
+        while(cases-- > 0)
+        {
+            int symbols = sc.nextInt();
+            int totalCost = sc.nextInt();
+            Map<String,Integer> map = new HashMap<>();
+            for(int i = 0 ;i<symbols;i++)
+            {
+                String symbol = sc.next();
+                int cost = sc.nextInt();
+                map.put(symbol,cost);
+                sc.nextLine();
+            }
+            for(String s : sc.nextLine().split(""))
+            {
+                if(map.containsKey(s))
+                {
+                    totalCost += map.get(s);
+                }
+            }
+            joiner.add(totalCost +"");
+        }    
+        System.out.println(joiner);
+    }
+}

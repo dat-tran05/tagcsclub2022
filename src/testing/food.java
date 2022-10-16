@@ -6,7 +6,7 @@ import java. math.*;
 
 public class food {
 	public static void main(String[] datt) throws Throwable{
-		Scanner sc = new Scanner(new File("src/testing/test.dat"));
+		Scanner sc = new Scanner(new File("src/testing/test2.dat"));
 		List<Book> list = new ArrayList<>();
 		while(sc.hasNextLine())
 			list.add(new Book(sc.nextLine()));

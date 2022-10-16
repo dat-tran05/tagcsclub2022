@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        String s = new Scanner(System.in).nextLine();
+        while(s.length() != 0)
+        {
+            System.out.print(s);
+            s = s.substring(0,s.length()-1);
+        }
+    }
+}
