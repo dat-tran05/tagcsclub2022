@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int tc = Integer.parseInt(sc.nextLine());
+        while(tc-- > 0)
+        {
+            int words = Integer.parseInt(sc.nextLine());
+            List<String> allWords = new ArrayList<>();
+            for(int i =0;i<words;i++)allWords.add(sc.nextLine());
+            int pLines = sc.nextInt();
+            sc.nextLine();
+            String series = "";
+            for(int i =1;i<pLines+1;i++)
+            {
+                String line = sc.nextLine().replaceAll("\\s","");
+                if(i%2==0)
+                 series += new StringBuilder(line).reverse().toString();
+                else
+                    series+=line;
+            }
+            // System.out.println(series);
+            // System.out.println(allWords);
+            boolean valid = true;
+            for(String s : allWords)
+            {
+                if(series.contains(s) == false)
+                {
+                   valid = false;                    
+                }
+            }
+            System.out.println(valid ? "All words found!" : "Unsolvable. Not fair!");
+        }
+    }
+}

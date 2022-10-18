@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int lines = scan.nextInt();
+        int base = scan.nextInt();
+        StringJoiner sj = new StringJoiner(" ");
+        scan.nextLine();
+        while(lines-->0){
+            String[] seq = scan.nextLine().split(" ");
+            for(String s : seq){
+                int i = Integer.parseInt(s, base);
+                sj.add(Integer.toBinaryString(i));  
+                
+            }
+            
+            System.out.println(sj);
+            sj = new StringJoiner(" ");
+        }
+    }
+}
+

@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int trees = sc.nextInt(),paths = sc.nextInt();
+        int[][] matrix = new int[trees][trees];
+        for(int i = 0;i<paths;i++)
+        {
+            int from = sc.nextInt()-1;
+            int to = sc.nextInt()-1;
+            matrix[from][to]++;
+        }
+        // System.out.println(Arrays.deepToString(matrix));
+        int max = 0;
+        int index = -1;
+        for(int rows = 0;rows<matrix.length;rows++)
+        {
+            int total = 0;
+            for(int cols = 0;cols<matrix[rows].length;cols++)
+                total += matrix[rows][cols];
+            if(total > max)
+            {
+                index = rows+1;
+                max = total;
+            }
+        }
+        System.out.print(index);
+                
+    }
+}
+

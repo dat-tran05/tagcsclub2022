@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+// import java.util.Collectors;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int tc = sc.nextInt();
+        sc.nextLine();
+        while(tc-- > 0)
+        {
+            int plots = sc.nextInt(), removals = sc.nextInt();
+            int storeRemovals = removals;
+            int[] array = new int[plots];
+            for(int i = 0;i<plots;i++)
+                array[i] = sc.nextInt();
+            int max = 0;
+            for(int i = 0;i<array.length-1;i++)
+            {
+                if(removals - array[i] < 0)continue;
+                removals -= array[i];
+                int consecutives = 1;
+                for(int j = i+1;j<array.length;j++)
+                {
+                    if(removals - array[j] < 0){
+                        break;
+                    }else{
+                        consecutives++;
+                        removals -= array[j];
+                    }
+                }
+                max = Math.max(consecutives, max);
+                removals = storeRemovals;
+            }
+            System.out.println(max);
+        }
+    }
+}
