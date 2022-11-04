@@ -2,7 +2,7 @@ package testing;
 
 import java.util.*;
 import java.io.*;
-import java. math.*;
+import java.math.*;
 
 public class food {
 	public static void main(String[] datt) throws Throwable{
@@ -15,6 +15,10 @@ public class food {
 		list.sort(Comparator.comparing(Book::getAuthor).thenComparing(Comparator.comparing(Book::getGenre)));
 		
 		list.forEach(System.out::println);
+
+		System.out.println(list);
+		
+
 	}
 }
 class Book
