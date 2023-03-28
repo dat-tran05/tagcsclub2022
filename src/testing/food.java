@@ -1,11 +1,37 @@
 import java.util.*;
 import java.io.*;
+<<<<<<< HEAD
 import java.math.*;
+=======
+>>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 
+<<<<<<< HEAD
 public class food extends PrintWriter {
 	food() {
 		super(System.out);
+=======
+public class food {
+	public static void main(String[] datt) throws Throwable {
+		Scanner sc = new Scanner(new File("src/testing/test2.dat"));
+		List<Book> list = new ArrayList<>();
+		while (sc.hasNextLine())
+			list.add(new Book(sc.nextLine()));
+		// Collections.sort(list);
+		// sorts the same as the previous example
+		list.sort(Comparator.comparing(Book::getAuthor).thenComparing(Comparator.comparing(Book::getGenre)));
+
+		list.forEach(System.out::println);
+
+		System.out.println(list);
+
+		/*
+		 * 
+		 * sdfsdf
+		 */
+
+>>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 	}
+<<<<<<< HEAD
 
 	FastScanner sc = new FastScanner();
 
@@ -13,15 +39,33 @@ public class food extends PrintWriter {
 		food o = new food();
 		o.main();
 		o.flush()
+=======
+}
+
+class Book {
+	public String author, name, genre;
+
+	public Book(String line) {
+		String[] arr = line.split("\\*");
+		name = arr[0];
+		author = arr[1];
+		genre = arr[2];
+>>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 	}
 
+<<<<<<< HEAD
 	void main() {
 		for (int t = sc.nextInt(); t-- > 0;) {
 			println("sdf");
 			printf("%f",20);
 		}
+=======
+	public String toString() {
+		return name + "*" + author + "*" + genre;
+>>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 	}
 
+<<<<<<< HEAD
 	static class FastScanner extends PrintWriter {
 		private InputStream stream;
 		private byte[] buf = new byte[1 << 16];
@@ -131,5 +175,13 @@ public class food extends PrintWriter {
 		public double nextDouble() {
 			return Double.parseDouble(next());
 		}
+=======
+	public String getAuthor() {
+		return author;
+	}
+
+	public String getGenre() {
+		return genre;
+>>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 	}
 }
