@@ -15,7 +15,7 @@ class _243 implements Apple{
 	public static void main(String jack [                              ]) {
 		Apple a = new _243();
 		System.out.println(a.apple(23));
-		grapes grape = new grapes(234);
+//		grapes grape = new grapes(234);
 		
 	}
 	private class grapes{

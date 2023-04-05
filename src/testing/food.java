@@ -2,14 +2,7 @@ import java.util.*;
 import java.io.*;
 <<<<<<< HEAD
 import java.math.*;
-=======
->>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 
-<<<<<<< HEAD
-public class food extends PrintWriter {
-	food() {
-		super(System.out);
-=======
 public class food {
 	public static void main(String[] datt) throws Throwable {
 		Scanner sc = new Scanner(new File("src/testing/test2.dat"));
@@ -29,17 +22,6 @@ public class food {
 		 * sdfsdf
 		 */
 
->>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
-	}
-<<<<<<< HEAD
-
-	FastScanner sc = new FastScanner();
-
-	public static void main(String[] nutz) throws IOException {
-		food o = new food();
-		o.main();
-		o.flush()
-=======
 }
 
 class Book {
@@ -50,22 +32,19 @@ class Book {
 		name = arr[0];
 		author = arr[1];
 		genre = arr[2];
->>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 	}
 
-<<<<<<< HEAD
-	void main() {
-		for (int t = sc.nextInt(); t-- > 0;) {
-			println("sdf");
-			printf("%f",20);
-		}
-=======
+
 	public String toString() {
 		return name + "*" + author + "*" + genre;
->>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
+	}
+	public String getAuthor() {
+		return author;
 	}
 
-<<<<<<< HEAD
+	public String getGenre() {
+		return genre;
+	}
 	static class FastScanner extends PrintWriter {
 		private InputStream stream;
 		private byte[] buf = new byte[1 << 16];
@@ -175,13 +154,5 @@ class Book {
 		public double nextDouble() {
 			return Double.parseDouble(next());
 		}
-=======
-	public String getAuthor() {
-		return author;
-	}
-
-	public String getGenre() {
-		return genre;
->>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
-	}
+	
 }

@@ -12,7 +12,7 @@ public class Testing extends Object implements B{
 		list2.add(32);
 		System.out.println(list1 + "    " + list2);
 		int a1 = 234;
-		A interf = (final a, final b) -> a + b + a1;
+		A interf = (a,  b) -> a + b + a1;
 		System.out.println(yuh(1200));
 		
 		Polygon p1 = new Polygon() {

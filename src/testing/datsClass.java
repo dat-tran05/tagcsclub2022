@@ -1,6 +1,6 @@
 package testing;
 
-<<<<<<< HEAD
+
 import java.util.Iterator;
 import java.util.function.Consumer;
 import java.util.function.*;
@@ -10,7 +10,6 @@ import java.util.*;
 
 public class datsClass {
 	public static void main(String[] args) {
-<<<<<<< HEAD
 //		List<Apple> list = new ArrayList<>();
 //		for(int i =0 ; i < 10; i++) {
 //			list.add(new Apple());
@@ -39,12 +38,10 @@ public class datsClass {
 		
 		for(;c1 < 1000;) {
 			System.out.println(c1++);
-=======
 		Stack<String> stack = new Stack<>();
 		System.out.println('d');
 		for (int i = 0; i < args.length; i++) {
 			stack.add("'s");
->>>>>>> branch 'master' of https://github.com/dat-tran05/tagcsclub2022.git
 		}
 		System.out.println(longer);
 		System.out.println((System.currentTimeMillis()-longer)/1000.0);
